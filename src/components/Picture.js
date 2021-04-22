@@ -10,9 +10,11 @@ export default class Picture extends React.Component {
         let cssClass = _.get(this.props, 'cssClass', null);
         return (
             image && (
-            <picture>
-              <img src={withPrefix(image)} {...(alt ? ({alt: alt}) : null)}  {...(cssClass ? ({className: cssClass}) : null)}/>
-            </picture>
+                <picture>
+                    {/* <div style={{width:`200px`,height:`200px`,overflow:`hidden`}}> */}
+                        <img src={withPrefix(image)} {...(alt ? ({alt: alt}) : null)}  {...(cssClass ? ({className: cssClass}) : null)}/>
+                    {/* </div> */}
+                </picture>  
             )
         );
     }

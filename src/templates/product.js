@@ -39,11 +39,15 @@ export default class Product extends React.Component {
                                 <svg width="20" height="10" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.739 4.309h17.011v1.284h-17.11l3.43 3.396-0.895 0.886-4.924-4.875 4.924-4.875 0.895 0.886-3.331 3.298z" />
                                 </svg>
-                                see all products
+                                查看所有产品
                             </Link>
                         </div>
                         <figure className="product__figure">
-                            <Picture {...this.props} image={_.get(this.props, 'pageContext.frontmatter.default_original_image', null)} alt={_.get(this.props, 'pageContext.frontmatter.title', null)} cssClass={'product__image'} />
+                            <div style={{position: `relative`,width: `100%`,height: 0,paddingBottom: `100%`}}>
+                                <div style={{position:`absolute`,width:`100%`,top:`0`,left:`0`,right:`0`,bottom:`0`,textAlign:`center`}}>
+                                    <Picture {...this.props} image={_.get(this.props, 'pageContext.frontmatter.default_original_image', null)} alt={_.get(this.props, 'pageContext.frontmatter.title', null)} cssClass={'product__image'} />
+                                </div>
+                            </div>
                         </figure>
                         <div className="product__details">
                             <h1 className="product__title">
@@ -58,7 +62,8 @@ export default class Product extends React.Component {
                                 );
                             })())}
                             <div className="product__price">
-                                ${_.get(this.props, 'pageContext.frontmatter.price', null)}
+                                {/* 价格 */}
+                                {/* ${_.get(this.props, 'pageContext.frontmatter.price', null)} */}
                             </div>
                             <article className="product__description">
                                 {_.get(this.props, 'pageContext.frontmatter.description', null)}
@@ -71,7 +76,7 @@ export default class Product extends React.Component {
                         let category_page = getPageByFilePath(this.props.pageContext.pages, _.get(this.props, 'pageContext.frontmatter.category', null));
                         return (
                             <section className="content__row">
-                                <h2 className="content__row-title">Related</h2>
+                                <h2 className="content__row-title">同类推荐</h2>
                                 <ProductGrid {...this.props} product_pages={product_pages} category_url={_.get(category_page, 'url', null)} cssClass={'store__product-grid'} site={this.props.pageContext.site} />
                             </section>
                         );
@@ -80,7 +85,7 @@ export default class Product extends React.Component {
                         <svg width="20" height="10" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.739 4.309h17.011v1.284h-17.11l3.43 3.396-0.895 0.886-4.924-4.875 4.924-4.875 0.895 0.886-3.331 3.298z" />
                         </svg>
-                        see all products
+                        查看所有产品
                     </Link>
                 </main>
             </Layout>

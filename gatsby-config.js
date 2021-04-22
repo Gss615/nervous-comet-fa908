@@ -15,6 +15,13 @@ module.exports = {
             }
         },
         {
+            resolve:`gatsby-source-filesystem`,
+            options:{
+                name:'huaweiAP',
+                path:`${__dirname}/static/images/huawei/huaweiAP`
+            }
+        },
+        {
             resolve: `gatsby-plugin-sass`,
             options: {}
         },

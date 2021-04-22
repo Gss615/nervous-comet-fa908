@@ -32,6 +32,7 @@ function findFileNode({node, getNode}) {
 }
 
 exports.onCreateNode = ({node, getNode, actions}, options) => {
+    console.log("onCreateNode被调用")
 
     const {createNodeField} = actions;
 

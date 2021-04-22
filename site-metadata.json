@@ -8,21 +8,21 @@
     "bg_image_secondary": "/images/leaf-light-grey.svg",
     "bg_image_product": "/images/leaf.svg",
     "snipcart_api_key": "",
-    "footer_text": "Copyright 2021 Planty Inc. All rights reserved.",
+    "footer_text": "版权所有 2021 河南网田.",
     "palette": "green",
     "main_menu": [
         {
-            "title": "Store",
+            "title": "产品",
             "url": "/store",
             "style": "link"
         },
         {
-            "title": "About",
+            "title": "关于我们",
             "url": "/about",
             "style": "link"
         },
         {
-            "title": "FAQ",
+            "title": "联系方式",
             "url": "/faq",
             "style": "link"
         }

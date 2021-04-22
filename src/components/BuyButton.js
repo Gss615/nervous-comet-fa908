@@ -27,7 +27,7 @@ export default class BuyButton extends React.Component {
                     </svg>
                 </span>
                 <span className="button__text">
-                    Add to cart
+                    在线询价
                 </span>
             </button>
         );
